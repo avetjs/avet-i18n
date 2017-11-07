@@ -1,5 +1,5 @@
 import { translate } from 'react-i18next';
-import i18n from './lib/i18n';
+import * as i18n from './lib/i18n';
 
 export default function(Component, locales, options) {
   const WrapComponent = translate(locales, Object.assign({}, {

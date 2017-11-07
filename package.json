@@ -5,15 +5,23 @@
   "avetPlugin": {
     "name": "i18n"
   },
+  "module": "index.es.js",
+  "main": "index.umd.js",
   "keywords": [
     "avet",
     "avetPlugin",
     "avet-plugin",
     "i18n"
   ],
+  "scripts": {
+    "build": "avet-bin build",
+    "prepublish": "avet-bin build"
+  },
   "dependencies": {
+    "@iocast/koa-i18next": "^0.0.4",
     "i18next": "^10.0.3",
     "i18next-browser-languagedetector": "^2.0.0",
+    "i18next-node-fs-backend": "^1.0.0",
     "i18next-xhr-backend": "^1.4.3",
     "react-i18next": "^6.1.0"
   },
@@ -28,8 +36,13 @@
     "config",
     "page",
     "extend",
+    "lib",
     "dist",
-    "app.js"
+    "app.js",
+    "index.js",
+    "index.umd.js",
+    "index.cjs.js",
+    "index.es.js"
   ],
   "ci": {
     "version": "8"
