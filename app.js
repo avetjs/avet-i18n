@@ -9,13 +9,16 @@ module.exports = (app) => {
   i18next
     .use(Backend)
     .init({
+      fallbackLng: 'en-US',
+      ns: ['common'],
+      defaultNS: 'common',
       backend: {
         // translation resources
         loadPath: resolve(app.config.avet.dir, 'config', 'locales/{{lng}}/{{ns}}.json'),
         addPath: resolve(app.config.avet.dir, 'config', 'locales/{{lng}}/{{ns}}.missing.json')
       },
-      preload: ['zh', 'en'], // must know what languages to use
-      fallbackLng: 'en'
+      preload: ['zh-CN', 'en-US'], // must know what languages to use
+      fallbackLng: 'en-US'
     });
 
   app.use(i18nextMiddleware(i18next, app));

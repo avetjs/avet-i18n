@@ -26,7 +26,9 @@
     "react-i18next": "^6.1.0"
   },
   "devDependencies": {
-    "avet-bin": "0.2.1"
+    "avet-bin": "0.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "author": "okoala <dapixp@gmail.com>",
   "engines": {

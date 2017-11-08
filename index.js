@@ -1,5 +1,7 @@
+import React from 'react';
 import { translate } from 'react-i18next';
-import * as i18n from './lib/i18n';
+
+const i18n = require('./lib/i18n');
 
 export default function(Component, locales, options) {
   const WrapComponent = translate(locales, Object.assign({}, {
@@ -7,10 +9,12 @@ export default function(Component, locales, options) {
     wait: process.browser,
   }, options))(Component);
 
-  WrapComponent.getInitialProps = async({ ctx }) => {
+  WrapComponent.getInitialProps = async ({ ctx }) => {
     if (ctx && !process.browser) {
       return i18n.getInitialProps(ctx, locales);
     }
     return {};
   }
+
+  return WrapComponent;
 }
