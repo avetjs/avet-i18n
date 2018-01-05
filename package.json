@@ -26,7 +26,7 @@
     "react-i18next": "^7.0.0"
   },
   "devDependencies": {
-    "avet-bin": "0.2.1",
+    "avet-bin": "0.7.4",
     "react": "16.2.0",
     "react-dom": "16.2.0"
   },
