@@ -23,7 +23,7 @@
     "i18next-browser-languagedetector": "^2.0.0",
     "i18next-node-fs-backend": "^1.0.0",
     "i18next-xhr-backend": "^1.4.3",
-    "react-i18next": "^6.1.0"
+    "react-i18next": "^7.0.0"
   },
   "devDependencies": {
     "avet-bin": "0.2.1",
